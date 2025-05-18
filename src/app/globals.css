@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 276 60% 97%; /* Very light lavender/off-white e.g. #FAF5FD */
+    --foreground: 273 67% 19%; /* Dark Purple #301050 */
+
+    --card: 270 50% 94%; /* Lighter version of #C9A9E9, e.g. #EADDF3 */
+    --card-foreground: 273 67% 19%; /* Dark Purple #301050 */
+
+    --popover: 270 50% 94%;
+    --popover-foreground: 273 67% 19%;
+
+    --primary: 274 65% 47%; /* Vibrant Purple #7828C8 */
+    --primary-foreground: 276 60% 97%; /* Very light lavender for text on primary */
+
+    --secondary: 273 60% 30%; /* A less vibrant, darker purple */
+    --secondary-foreground: 276 60% 97%;
+
+    --muted: 270 50% 88%; /* Muted version of #C9A9E9 */
+    --muted-foreground: 273 67% 25%; /* Slightly lighter dark purple */
+
+    --accent: 270 50% 80%; /* Light Purple #C9A9E9 */
+    --accent-foreground: 274 67% 10%; /* Very Dark Purple #180828 for text on accent */
+
+    --destructive: 0 70% 55%; /* Adjusted for better harmony */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 274 65% 85%; /* Lighter tint of primary */
+    --input: 274 65% 90%; /* Even lighter tint of primary */
+    --ring: 274 65% 55%; /* Slightly lighter primary for focus rings */
+
+    --radius: 0.5rem;
+
+    --chart-1: 274 65% 47%; /* Primary */
+    --chart-2: 270 50% 80%; /* Accent */
+    --chart-3: 274 50% 60%; 
+    --chart-4: 270 55% 70%;
+    --chart-5: 273 40% 50%;
+
+    /* Sidebar specific colors - Light Theme */
+    --sidebar-background: 276 60% 95%; /* Slightly off main bg */
+    --sidebar-foreground: 273 67% 19%;
+    --sidebar-primary: 274 65% 47%;
+    --sidebar-primary-foreground: 276 60% 97%;
+    --sidebar-accent: 270 50% 90%; /* Lighter accent for sidebar */
+    --sidebar-accent-foreground: 273 67% 19%;
+    --sidebar-border: 274 65% 88%;
+    --sidebar-ring: 274 65% 55%;
+  }
+
+  .dark {
+    --background: 274 67% 10%; /* Very Dark Purple #180828 */
+    --foreground: 270 50% 88%; /* Muted Light Purple for text */
+
+    --card: 273 67% 15%; /* Slightly lighter than background, e.g. #250C30 */
+    --card-foreground: 270 50% 88%;
+
+    --popover: 273 67% 15%;
+    --popover-foreground: 270 50% 88%;
+
+    --primary: 274 65% 55%; /* Slightly lighter vibrant purple for dark mode #8A48D8 */
+    --primary-foreground: 274 67% 10%; /* Very Dark Purple for text on primary */
+
+    --secondary: 273 60% 40%;
+    --secondary-foreground: 270 50% 92%;
+
+    --muted: 273 67% 20%;
+    --muted-foreground: 270 50% 70%;
+
+    --accent: 270 50% 75%; /* Slightly desaturated/darker #BBA0D9 for dark mode accent */
+    --accent-foreground: 274 67% 10%;
+
+    --destructive: 0 60% 50%; 
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 273 67% 25%; /* Darker border */
+    --input: 273 67% 22%; /* Darker input */
+    --ring: 274 65% 60%; /* Primary for rings in dark mode */
+
+    --chart-1: 274 65% 55%; /* Primary */
+    --chart-2: 270 50% 75%; /* Accent */
+    --chart-3: 274 50% 50%;
+    --chart-4: 270 55% 60%;
+    --chart-5: 273 40% 40%;
+    
+    /* Sidebar specific colors - Dark Theme */
+    --sidebar-background: 274 67% 8%; /* Slightly off main bg dark */
+    --sidebar-foreground: 270 50% 88%;
+    --sidebar-primary: 274 65% 55%;
+    --sidebar-primary-foreground: 274 67% 10%;
+    --sidebar-accent: 273 67% 18%; /* Darker accent for sidebar */
+    --sidebar-accent-foreground: 270 50% 88%;
+    --sidebar-border: 273 67% 20%;
+    --sidebar-ring: 274 65% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
